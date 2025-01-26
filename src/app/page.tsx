@@ -3,7 +3,6 @@ import {
   dehydrate,
   HydrationBoundary,
   QueryClient,
-  useQuery,
 } from "@tanstack/react-query";
 import Pokemon from "./pokemon/pokemon";
 
