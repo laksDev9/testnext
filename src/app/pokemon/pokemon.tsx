@@ -1,6 +1,6 @@
 "use client";
 
-import { useQuery } from "@tanstack/react-query";
+import { useQuery, useSuspenseQuery } from "@tanstack/react-query";
 import { fetchPokemon, fetchPosts } from "../api";
 
 export default function Posts() {
@@ -8,6 +8,8 @@ export default function Posts() {
   // child to <Posts>, data will be available immediately either way
 
   const { data } = useQuery({
+    // const { data } = useSuspenseQuery({
+    //na xrisimopoiisw usesuspense pou trww to self signed cert in chain error
     queryKey: ["pokemon"],
     queryFn: () => fetchPokemon(),
   });
